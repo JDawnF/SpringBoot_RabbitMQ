@@ -1,0 +1,35 @@
+spring:
+  rabbitmq:
+    addresses: 127.0.0.1:5672
+    username: guest
+    password: guest
+    virtual-host: /    # rabbitmq默认虚拟主机
+    publisher-confirms: true
+    publisher-returns: true
+    template:
+      mandatory: true
+  http:
+    encoding:
+      charset: UTF-8
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/rabbitmq?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+#    username: root
+#    password: 123456
+#    driverClassName: com.mysql.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+server:
+  port: 8001
+  servlet:
+    context-path: /
+#mybatis:
+#  type-aliases-package: com.baichen.springbootproducer
+#  mapper-locations: classpath:com/baichen/springbootproducer/mapping/*.xml
+logging:
+  level:
+    tk:
+      mybatis: trace

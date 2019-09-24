@@ -16,19 +16,19 @@ spring:
     time-zone: GMT+8
     default-property-inclusion: non_null
 
-#  datasource:
-#    url: jdbc:mysql://localhost:3306/rabbitmq?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
-#    username: root
-#    password: 123456
-#    driverClassName: com.mysql.jdbc.Driver
-#    type: com.alibaba.druid.pool.DruidDataSource
+  datasource:
+    url: jdbc:mysql://localhost:3306/rabbitmq?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+    driverClassName: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
 server:
   port: 8001
   servlet:
     context-path: /
-#mybatis:
-#  type-aliases-package: com.baichen.springbootproducer
-#  mapper-locations: classpath:com/baichen/springbootproducer/mapping/*.xml
+mybatis:
+  type-aliases-package: com.baichen.springbootproducer.mapper
+  mapper-locations: classpath:com/baichen/springbootproducer/mapping/*.xml
 logging:
   level:
     tk:
